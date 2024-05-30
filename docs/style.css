@@ -1,0 +1,181 @@
+/*Modern CSS Reset*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* ============================================== */
+/* adding figtree font */
+@font-face {
+    font-family: "figtree";
+    src: url(./assets/fonts/Figtree-VariableFont_wght.ttf) format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* headings and paragraphs style */
+h1,
+p {
+    font-family: "figtree";
+    color: black;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+p {
+    font-weight: 500;
+}
+
+.h1-learning {
+    font-size: clamp(1rem, 0.5rem + 0.5vw, 1.25rem);
+    background-color: hsl(47, 88%, 63%);
+    width: fit-content;
+    padding: 6px 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.h1-foundations {
+    font-size: clamp(1rem, 1rem + 0.5vw, 1.5rem);
+
+}
+
+.p-desc {
+    font-size: clamp(1rem, 0.5rem + 0.5vw, 1rem);
+    color: grey;
+    margin-bottom: 20px;
+}
+
+/* container */
+.container {
+    width: 1200px;
+    box-shadow: 0px 10px 24px 2px grey;
+    background-color: hsl(47, 88%, 63%);
+    padding: 100px 0;
+    margin: 100px auto
+}
+
+/* child container */
+.blog-card {
+    position: relative;
+    width: 380px;
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 7px 7px;
+    border-radius: 15px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.img-card,
+.img-card img {
+    border-radius: 10px;
+}
+
+/* profile picture and profile name */
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-card {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.profile-name {
+    font-size: clamp(0.87rem, 0.5rem + 0.5vw, 1rem);
+    margin-bottom: 10px;
+}
