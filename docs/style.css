@@ -130,7 +130,7 @@ p {
 
 .p-desc {
     font-size: clamp(1rem, 0.5rem + 0.5vw, 1rem);
-    color: grey;
+    color: rgb(98, 96, 96);
     margin-bottom: 20px;
 }
 
